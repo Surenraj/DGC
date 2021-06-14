@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'Visitors_details.dart';
+import 'CreateVisitor.dart';
 import 'dart:async';
+import '../../security/SecurityHome.dart';
+import '../../admin/AdminHome.dart';
+
 import 'package:date_range_picker/date_range_picker.dart' as DateRangePicker;
 
 class VisitorsLog extends StatefulWidget {
@@ -49,7 +53,7 @@ class _VisitorsLogState extends State<VisitorsLog> {
             icon: Icon(Icons.arrow_back, color: Colors.white),
             onPressed: () => Navigator.of(context).pop(),
           ),
-          title: Text("Visitors Logs"),
+          title: Text("Visitor Logs"),
           centerTitle: true,
           actions: <Widget>[
             IconButton(
@@ -70,6 +74,13 @@ class _VisitorsLogState extends State<VisitorsLog> {
                                   margin: const EdgeInsets.only(
                                       left: 40.0, top: 30.0, right: 40.0),
                                   child: GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => AdminHome()),
+                                      );
+                                    },
                                     child: Text("All",
                                         style: TextStyle(
                                           fontSize: 20.0,
@@ -81,6 +92,14 @@ class _VisitorsLogState extends State<VisitorsLog> {
                                   margin: const EdgeInsets.only(
                                       left: 40.0, top: 20.0, right: 40.0),
                                   child: GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                SecurityHome()),
+                                      );
+                                    },
                                     child: Text("Expected",
                                         style: TextStyle(
                                           fontSize: 20.0,
@@ -214,7 +233,12 @@ class _VisitorsLogState extends State<VisitorsLog> {
             child: Icon(Icons.add),
             foregroundColor: Colors.white,
             backgroundColor: Color(0xFF7Fb539),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CreateVisitor()),
+              );
+            },
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(16)))));
   }
