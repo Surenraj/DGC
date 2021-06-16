@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'Visitor_details.dart';
+import 'CreateVisitor.dart';
 
 class SecurityVisitorLog extends StatefulWidget {
   const SecurityVisitorLog({Key? key}) : super(key: key);
@@ -53,251 +55,287 @@ class _SecurityVisitorLogState extends State<SecurityVisitorLog> {
             ),
             Container(
               margin: const EdgeInsets.only(left: 20.0, top: 10.0, right: 20.0),
-              child: Column(children: [
-                Container(
-                    margin: const EdgeInsets.only(top: 5.0),
-                    child: Stack(children: <Widget>[
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            new Text("John Antony",
-                                style: TextStyle(
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.w500,
-                                    color: Color(0xFF7Fb539))),
-                            new Text("     Hold    ",
-                                style: TextStyle(
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => SecurityVisitorsDetails()),
+                  );
+                },
+                child: Column(children: [
+                  Container(
+                      margin: const EdgeInsets.only(top: 5.0),
+                      child: Stack(children: <Widget>[
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              new Text("John Antony",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w500,
+                                      color: Color(0xFF7Fb539))),
+                              new Text("     Hold    ",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black87,
+                                      backgroundColor: Colors.yellow)),
+                            ]),
+                      ])),
+                  Container(
+                      margin: const EdgeInsets.only(top: 5.0),
+                      child: Stack(children: <Widget>[
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              new Text("Block 2, 202",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black87)),
+                              new Text("Friend",
+                                  style: TextStyle(
                                     fontSize: 17,
                                     fontWeight: FontWeight.w500,
                                     color: Colors.black87,
-                                    backgroundColor: Colors.yellow)),
-                          ]),
-                    ])),
-                Container(
-                    margin: const EdgeInsets.only(top: 5.0),
-                    child: Stack(children: <Widget>[
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            new Text("Block 2, 202",
-                                style: TextStyle(
+                                  )),
+                            ]),
+                      ])),
+                  Container(
+                      margin: const EdgeInsets.only(top: 5.0),
+                      child: Stack(children: <Widget>[
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              new Text("Today, 10:00 am",
+                                  style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.black87)),
+                              new Text("A21036",
+                                  style: TextStyle(
                                     fontSize: 17,
                                     fontWeight: FontWeight.w500,
-                                    color: Colors.black87)),
-                            new Text("Friend",
-                                style: TextStyle(
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black87,
-                                )),
-                          ]),
-                    ])),
-                Container(
-                    margin: const EdgeInsets.only(top: 5.0),
-                    child: Stack(children: <Widget>[
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            new Text("Today, 10:00 am",
-                                style: TextStyle(
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.black87)),
-                            new Text("A21036",
-                                style: TextStyle(
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black87,
-                                )),
-                          ]),
-                    ]))
-              ]),
+                                    color: Colors.black87,
+                                  )),
+                            ]),
+                      ]))
+                ]),
+              ),
             ),
             Container(
               margin: const EdgeInsets.only(left: 20.0, top: 10.0, right: 20.0),
-              child: Column(children: [
-                Container(
-                    margin: const EdgeInsets.only(top: 5.0),
-                    child: Stack(children: <Widget>[
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            new Text("John Antony",
-                                style: TextStyle(
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => SecurityVisitorsDetails()),
+                  );
+                },
+                child: Column(children: [
+                  Container(
+                      margin: const EdgeInsets.only(top: 5.0),
+                      child: Stack(children: <Widget>[
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              new Text("John Antony",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w500,
+                                      color: Color(0xFF7Fb539))),
+                              new Text("     Approved    ",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.white,
+                                      backgroundColor: Color(0xFF7Fb539))),
+                            ]),
+                      ])),
+                  Container(
+                      margin: const EdgeInsets.only(top: 5.0),
+                      child: Stack(children: <Widget>[
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              new Text("Block 2, 202",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black87)),
+                              new Text("Friend",
+                                  style: TextStyle(
                                     fontSize: 17,
                                     fontWeight: FontWeight.w500,
-                                    color: Color(0xFF7Fb539))),
-                            new Text("     Approved    ",
-                                style: TextStyle(
+                                    color: Colors.black87,
+                                  )),
+                            ]),
+                      ])),
+                  Container(
+                      margin: const EdgeInsets.only(top: 5.0),
+                      child: Stack(children: <Widget>[
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              new Text("Today, 10:00 am",
+                                  style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.black87)),
+                              new Text("A21036",
+                                  style: TextStyle(
                                     fontSize: 17,
                                     fontWeight: FontWeight.w500,
-                                    color: Colors.white,
-                                    backgroundColor: Color(0xFF7Fb539))),
-                          ]),
-                    ])),
-                Container(
-                    margin: const EdgeInsets.only(top: 5.0),
-                    child: Stack(children: <Widget>[
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            new Text("Block 2, 202",
-                                style: TextStyle(
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.black87)),
-                            new Text("Friend",
-                                style: TextStyle(
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black87,
-                                )),
-                          ]),
-                    ])),
-                Container(
-                    margin: const EdgeInsets.only(top: 5.0),
-                    child: Stack(children: <Widget>[
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            new Text("Today, 10:00 am",
-                                style: TextStyle(
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.black87)),
-                            new Text("A21036",
-                                style: TextStyle(
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black87,
-                                )),
-                          ]),
-                    ])),
-              ]),
+                                    color: Colors.black87,
+                                  )),
+                            ]),
+                      ])),
+                ]),
+              ),
             ),
             Container(
               margin: const EdgeInsets.only(left: 20.0, top: 10.0, right: 20.0),
-              child: Column(children: [
-                Container(
-                    margin: const EdgeInsets.only(top: 5.0),
-                    child: Stack(children: <Widget>[
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            new Text("John Antony",
-                                style: TextStyle(
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => SecurityVisitorsDetails()),
+                  );
+                },
+                child: Column(children: [
+                  Container(
+                      margin: const EdgeInsets.only(top: 5.0),
+                      child: Stack(children: <Widget>[
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              new Text("John Antony",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w500,
+                                      color: Color(0xFF7Fb539))),
+                              new Text("     Denied    ",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.white,
+                                      backgroundColor: Color(0xFFE10000))),
+                            ]),
+                      ])),
+                  Container(
+                      margin: const EdgeInsets.only(top: 5.0),
+                      child: Stack(children: <Widget>[
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              new Text("Block 2, 202",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black87)),
+                              new Text("Friend",
+                                  style: TextStyle(
                                     fontSize: 17,
                                     fontWeight: FontWeight.w500,
-                                    color: Color(0xFF7Fb539))),
-                            new Text("     Denied    ",
-                                style: TextStyle(
+                                    color: Colors.black87,
+                                  )),
+                            ]),
+                      ])),
+                  Container(
+                      margin: const EdgeInsets.only(top: 5.0),
+                      child: Stack(children: <Widget>[
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              new Text("Today, 10:00 am",
+                                  style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.black87)),
+                              new Text("A21036",
+                                  style: TextStyle(
                                     fontSize: 17,
                                     fontWeight: FontWeight.w500,
-                                    color: Colors.white,
-                                    backgroundColor: Color(0xFFE10000))),
-                          ]),
-                    ])),
-                Container(
-                    margin: const EdgeInsets.only(top: 5.0),
-                    child: Stack(children: <Widget>[
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            new Text("Block 2, 202",
-                                style: TextStyle(
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.black87)),
-                            new Text("Friend",
-                                style: TextStyle(
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black87,
-                                )),
-                          ]),
-                    ])),
-                Container(
-                    margin: const EdgeInsets.only(top: 5.0),
-                    child: Stack(children: <Widget>[
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            new Text("Today, 10:00 am",
-                                style: TextStyle(
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.black87)),
-                            new Text("A21036",
-                                style: TextStyle(
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black87,
-                                )),
-                          ]),
-                    ])),
-              ]),
+                                    color: Colors.black87,
+                                  )),
+                            ]),
+                      ])),
+                ]),
+              ),
             ),
             Container(
               margin: const EdgeInsets.only(left: 20.0, top: 10.0, right: 20.0),
-              child: Column(children: [
-                Container(
-                    margin: const EdgeInsets.only(top: 5.0),
-                    child: Stack(children: <Widget>[
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            new Text("John Antony",
-                                style: TextStyle(
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => SecurityVisitorsDetails()),
+                  );
+                },
+                child: Column(children: [
+                  Container(
+                      margin: const EdgeInsets.only(top: 5.0),
+                      child: Stack(children: <Widget>[
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              new Text("John Antony",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w500,
+                                      color: Color(0xFF7Fb539))),
+                              new Text("     Waiting    ",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.white,
+                                      backgroundColor: Color(0xFF2D2D2D))),
+                            ]),
+                      ])),
+                  Container(
+                      margin: const EdgeInsets.only(top: 5.0),
+                      child: Stack(children: <Widget>[
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              new Text("Block 2, 202",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black87)),
+                              new Text("Friend",
+                                  style: TextStyle(
                                     fontSize: 17,
                                     fontWeight: FontWeight.w500,
-                                    color: Color(0xFF7Fb539))),
-                            new Text("     Waiting    ",
-                                style: TextStyle(
+                                    color: Colors.black87,
+                                  )),
+                            ]),
+                      ])),
+                  Container(
+                      margin: const EdgeInsets.only(top: 5.0),
+                      child: Stack(children: <Widget>[
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              new Text("Today, 10:00 am",
+                                  style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.black87)),
+                              new Text("A21036",
+                                  style: TextStyle(
                                     fontSize: 17,
                                     fontWeight: FontWeight.w500,
-                                    color: Colors.white,
-                                    backgroundColor: Color(0xFF2D2D2D))),
-                          ]),
-                    ])),
-                Container(
-                    margin: const EdgeInsets.only(top: 5.0),
-                    child: Stack(children: <Widget>[
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            new Text("Block 2, 202",
-                                style: TextStyle(
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.black87)),
-                            new Text("Friend",
-                                style: TextStyle(
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black87,
-                                )),
-                          ]),
-                    ])),
-                Container(
-                    margin: const EdgeInsets.only(top: 5.0),
-                    child: Stack(children: <Widget>[
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            new Text("Today, 10:00 am",
-                                style: TextStyle(
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.black87)),
-                            new Text("A21036",
-                                style: TextStyle(
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black87,
-                                )),
-                          ]),
-                    ])),
-              ]),
+                                    color: Colors.black87,
+                                  )),
+                            ]),
+                      ])),
+                ]),
+              ),
             ),
           ]),
         ),
@@ -305,7 +343,13 @@ class _SecurityVisitorLogState extends State<SecurityVisitorLog> {
             child: Icon(Icons.add),
             foregroundColor: Colors.white,
             backgroundColor: Color(0xFF7Fb539),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => SecurityCreateVisitor()),
+              );
+            },
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(16)))));
   }

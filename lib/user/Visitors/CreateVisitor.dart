@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:awesome_dialog/awesome_dialog.dart';
 
 class CreateVisitor extends StatefulWidget {
   const CreateVisitor({Key? key}) : super(key: key);
@@ -195,6 +196,110 @@ class _CreateVisitorState extends State<CreateVisitor> {
                   });
                 },
               )),
+          SizedBox(height: 30),
+          // ElevatedButton(
+          //   style: ButtonStyle(
+          //       backgroundColor: MaterialStateProperty.all(Color(0xFF7Fb539)),
+          //       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          //           RoundedRectangleBorder(
+          //               borderRadius: BorderRadius.circular(16.0),
+          //               side:
+          //                   BorderSide(color: Color(0xFF7Fb539), width: 2.0)))),
+          //   child: Text('Create', style: TextStyle(fontSize: 16.0)),
+          //   onPressed: () {
+          AnimatedButton(
+              text: 'Create',
+              color: Color((0xFF7Fb539)),
+              pressEvent: () {
+                AwesomeDialog(
+                  context: context,
+                  animType: AnimType.SCALE,
+                  dialogType: DialogType.SUCCES,
+                  body: Container(
+                      height: 500,
+                      child: Column(
+                        children: <Widget>[
+                          SizedBox(height: 10),
+                          Text("Visitor Entry Created",
+                              style: TextStyle(
+                                  color: Color(0xFF7Fb539),
+                                  fontSize: 23,
+                                  fontWeight: FontWeight.w500)),
+                          Container(
+                            margin: const EdgeInsets.all(15.0),
+                            padding: const EdgeInsets.all(8.0),
+                            height: 130,
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Color(0xFF7Fb539),
+                                width: 1.0,
+                              ),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: Center(
+                              child: Column(children: [
+                                SizedBox(height: 10),
+                                Text(
+                                  "Savannah Nguyen",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                                SizedBox(height: 20),
+                                Text("Relative",
+                                    style: TextStyle(
+                                        color: Color(0xFF7Fb539),
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 18)),
+                                SizedBox(height: 20),
+                                Row(children: [
+                                  Text(
+                                    "Expected Date : ",
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                  Text("Fri,26 Mar 2021",
+                                      style: TextStyle(
+                                          color: Color(0xFF7Fb539),
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 15)),
+                                ])
+                              ]),
+                            ),
+                          )
+                        ],
+                      )),
+                )..show();
+              }),
+
+          // showDialog(
+          //     context: context,
+          //     builder: (context) {
+          //       return Dialog(
+          //         shape: RoundedRectangleBorder(
+          //             borderRadius:
+          //                 BorderRadius.all(Radius.circular(20.0))),
+          //         child: Container(
+          //             height: 500,
+          //             child: Column(
+          //               children: <Widget>[
+          //                 SizedBox(height: 40),
+          //                 Text("Visitor Entry Created",
+          //                     style: TextStyle(
+          //                         color: Color(0xFF7Fb539),
+          //                         fontSize: 23,
+          //                         fontWeight: FontWeight.w500))
+          //               ],
+          //             )),
+          //       );
+          //     });
+          //   },
+          // ),
         ])));
   }
 }

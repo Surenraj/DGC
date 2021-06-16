@@ -183,11 +183,11 @@ class _AdminHomeState extends State<AdminHome> {
                         margin: EdgeInsets.only(left: 20, right: 20, top: 10),
                         child: GestureDetector(
                             onTap: () {
-                              // Navigator.push(
-                              //   context,
-                              //   MaterialPageRoute(
-                              //       builder: (context) => VisitorsLog()),
-                              // );
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => AdminVisitorsLog()),
+                              );
                             },
                             child: new Card(
                               color: Color(0xFF7Fb539),
