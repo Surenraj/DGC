@@ -4,7 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/services.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import './user/Visitors/VisitorsLog.dart';
+import './Visitors/VisitorsLog.dart';
+import 'userNotification.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -152,11 +153,20 @@ class _HomePageState extends State<HomePage> {
                               image: AssetImage('images/profile.png'))),
                     ),
                   ),
-                  Container(
-                    child: SvgPicture.asset(
-                      'images/icons/notification.svg',
-                      height: 35,
-                      width: 35,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => userNotification()),
+                      );
+                    },
+                    child: Container(
+                      child: SvgPicture.asset(
+                        'images/icons/notification.svg',
+                        height: 35,
+                        width: 35,
+                      ),
                     ),
                   ),
                 ],

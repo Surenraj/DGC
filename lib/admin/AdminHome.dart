@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'Visitor_log.dart';
+import 'AdminNotification.dart';
 
 class AdminHome extends StatefulWidget {
   @override
@@ -146,11 +147,20 @@ class _AdminHomeState extends State<AdminHome> {
                               fontSize: 25.0,
                               fontWeight: FontWeight.w500,
                               color: Colors.black))),
-                  Container(
-                    child: SvgPicture.asset(
-                      'images/icons/notification.svg',
-                      height: 32,
-                      width: 32,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => AdminNotification()),
+                      );
+                    },
+                    child: Container(
+                      child: SvgPicture.asset(
+                        'images/icons/notification.svg',
+                        height: 35,
+                        width: 35,
+                      ),
                     ),
                   ),
                 ],

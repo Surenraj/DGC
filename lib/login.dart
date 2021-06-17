@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter/cupertino.dart';
+import 'loginVerify.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -8,226 +11,131 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  bool _switchValue = true;
+
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.white,
+      statusBarBrightness: Brightness.light,
+      statusBarIconBrightness: Brightness.dark,
+      systemNavigationBarColor: Colors.white,
+      systemNavigationBarIconBrightness: Brightness.dark,
+    ));
     return Scaffold(
-      body: Row(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Container(
-            padding: const EdgeInsets.only(
-              top: 80,
-              bottom: 8,
-            ),
-            child: Column(
-              children: [
-                Container(
-                  child: Row(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: FlutterLogo(size: 107.63607788085938),
+        backgroundColor: Colors.white,
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                  padding: EdgeInsets.all(40),
+                  margin: EdgeInsets.only(top: 30),
+                  child: Image.asset("images/art.png")),
+              Container(
+                  child: Text("Manage Your Appartment",
+                      style: TextStyle(fontSize: 20))),
+              Container(
+                  child:
+                      Text("using this App", style: TextStyle(fontSize: 20))),
+              SizedBox(height: 30),
+              Container(
+                  padding:
+                      const EdgeInsets.only(left: 20.0, top: 15.0, right: 40.0),
+                  child: Align(
+                      alignment: Alignment.topLeft,
+                      child: Text("Phone Number",
+                          style: TextStyle(
+                              fontSize: 17,
+                              fontWeight: FontWeight.w400,
+                              color: Color(0xFF7Fb539))))),
+              Container(
+                  margin: const EdgeInsets.only(left: 20.0, right: 20.0),
+                  child: TextField(
+                      decoration: InputDecoration(
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Color(0xFF7Fb539)),
+                    ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Color(0xFF7Fb539)),
+                    ),
+                    border: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Color(0xFF7Fb539)),
+                    ),
+                  ))),
+              Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.only(left: 10.0, top: 10.0),
+                    child: Transform.scale(
+                      scale: 0.7,
+                      child: CupertinoSwitch(
+                        value: _switchValue,
+                        onChanged: (bool value) {
+                          setState(() {
+                            _switchValue = value;
+                          });
+                        },
                       ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 20.0),
-                Container(
-                  child: Text(
-                    "Manage Your Apartment using this App",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Color(0xff2d2d2d),
-                      fontSize: 20,
-                      fontFamily: "Montserrat",
-                      fontWeight: FontWeight.w500,
                     ),
                   ),
-                ),
-                SizedBox(height: 25.0),
-                Container(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      // Container(
-                      //   child: TextField(
-                      //     decoration: InputDecoration(
-                      //         border: InputBorder.none,
-                      //         labelText: "Phone number",
-                      //         hintText: "Enter your phone number"),
-                      //   ),
-                      // ),
-                      Text(
-                        "Phone Number",
-                        // textAlign: TextAlign.left,
-                        style: TextStyle(
-                          color: Color(0xff7fb539),
-                          fontSize: 16,
-                          fontFamily: "Montserrat",
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      // SizedBox(height: 35),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 37.73),
-                Container(
-                  padding: const EdgeInsets.only(
-                    right: 4,
-                    top: 17,
-                    bottom: 13,
-                  ),
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 40,
-                        height: 25,
-                        child: Row(
-                          children: [
-                            Container(
-                              width: 40,
-                              height: 25,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                                color: Color(0xffa6cc75),
-                              ),
-                              padding: const EdgeInsets.only(
-                                left: 2,
-                                right: 19,
-                              ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Container(
-                                    width: 18.46,
-                                    height: 18.75,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(8),
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(width: 27.68),
-                      Container(
-                        width: 149.18,
-                        height: 20.72,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: FlutterLogo(size: 20.71875),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 37.73),
-                SizedBox(
-                  width: 190,
-                  height: 18,
-                  child: Text(
-                    "Forget Password",
-                    textAlign: TextAlign.right,
-                    style: TextStyle(
-                      color: Color(0xFF000000),
-                      fontSize: 16,
-                      fontFamily: "Montserrat",
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ),
-                SizedBox(height: 37.73),
-                Container(
-                  width: 200,
-                  height: 56,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(32),
-                    color: Color(0xff7fb539),
-                  ),
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 71,
-                    vertical: 16,
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Log In",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
+                  Container(
+                      padding: const EdgeInsets.only(
+                          left: 5.0, top: 10.0, right: 20.0),
+                      child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Text("Login In as Admin",
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.black)))),
+                ],
+              ),
+              SizedBox(height: 10),
+              RaisedButton(
+                  padding:
+                      EdgeInsets.only(top: 15, left: 60, right: 60, bottom: 15),
+                  color: Color(0xFF7Fb539),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => LoginVerify()),
+                    );
+                  },
+                  child: Text('Log in',
+                      style: TextStyle(
                           fontSize: 18,
-                          fontFamily: "Montserrat",
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 37.73),
-                Container(
-                  width: 200,
-                  height: 56,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(32),
-                    border: Border.all(
-                      color: Color(0xff7fb539),
-                      width: 1,
-                    ),
-                  ),
-                  padding: const EdgeInsets.only(
-                    left: 62,
-                    right: 61,
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Register",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Color(0xff7fb539),
-                          fontSize: 18,
-                          fontFamily: "Montserrat",
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 7.73),
-                SizedBox(
-                  width: 260,
-                  child: Text(
-                    "By Continuing, You agree the Terms and Conditions",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Color(0xff505050),
-                      fontSize: 15,
-                    ),
-                  ),
-                ),
-              ],
-            ),
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white)),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25.0))),
+              SizedBox(height: 10),
+              RaisedButton(
+                  padding:
+                      EdgeInsets.only(top: 15, left: 53, right: 53, bottom: 15),
+                  color: Colors.white,
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => LoginVerify()),
+                    );
+                  },
+                  child: Text('Register',
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.w400)),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25.0),
+                      side: BorderSide(color: Color(0xFF7Fb539), width: 1.0))),
+              SizedBox(height: 70),
+              Container(
+                  child: Text("By Continuing, You agree",
+                      style: TextStyle(
+                          fontSize: 18, fontWeight: FontWeight.w300))),
+              Container(
+                  child: Text("the Terms and Conditions",
+                      style: TextStyle(
+                          fontSize: 18, fontWeight: FontWeight.w300))),
+            ],
           ),
-        ],
-      ),
-    );
+        ));
   }
 }
