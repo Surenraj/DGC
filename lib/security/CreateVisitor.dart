@@ -480,11 +480,17 @@ class _SecurityCreateVisitorState extends State<SecurityCreateVisitor> {
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Container(
               child: RaisedButton(
-                child: Image.asset("images/cctv.png", width: 60, height: 80),
-                // textColor: _hasBeenPressedFlat2 ? Colors.white : Colors.black,
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    top: 15.0,
+                    bottom: 20.0,
+                  ),
+                  child: Image.asset("images/cameraw_i.png",
+                      width: 40, height: 40),
+                ),
                 color: Color(0xFF7Fb539),
                 shape: RoundedRectangleBorder(
-                  borderRadius: new BorderRadius.circular(10.0),
+                  borderRadius: new BorderRadius.circular(20.0),
                 ),
                 onPressed: () => {},
               ),

@@ -6,13 +6,14 @@ import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import './Visitors/VisitorsLog.dart';
 import 'userNotification.dart';
+import './Tickets/userTicket.dart';
 
-class HomePage extends StatefulWidget {
+class UserHomePage extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _UserHomePageState createState() => _UserHomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _UserHomePageState extends State<UserHomePage> {
   int _selectedItem = 0;
 
   GlobalKey<ScaffoldState> drawerKey = GlobalKey();
@@ -246,7 +247,13 @@ class _HomePageState extends State<HomePage> {
                         height: 80,
                         margin: EdgeInsets.only(left: 20, right: 20, top: 10),
                         child: GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => UserTicket()),
+                              );
+                            },
                             child: new Card(
                               color: Color(0xFF7Fb539),
                               shape: RoundedRectangleBorder(
