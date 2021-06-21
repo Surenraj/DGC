@@ -7,6 +7,8 @@ import 'package:google_fonts/google_fonts.dart';
 import './Visitors/VisitorsLog.dart';
 import 'userNotification.dart';
 import './Tickets/userTicket.dart';
+import './events/UserEvents.dart';
+import './events/UserEventMaintenance.dart';
 
 class UserHomePage extends StatefulWidget {
   @override
@@ -275,7 +277,13 @@ class _UserHomePageState extends State<UserHomePage> {
                         height: 80,
                         margin: EdgeInsets.only(left: 20, right: 20, top: 10),
                         child: GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => UserEvents()),
+                              );
+                            },
                             child: new Card(
                               color: Color(0xFF7Fb539),
                               shape: RoundedRectangleBorder(
@@ -362,7 +370,14 @@ class _UserHomePageState extends State<UserHomePage> {
                         height: 80,
                         margin: EdgeInsets.only(left: 20, right: 20, top: 10),
                         child: GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        UserEventMaintenance()),
+                              );
+                            },
                             child: new Card(
                               color: Color(0xFF7Fb539),
                               shape: RoundedRectangleBorder(
@@ -419,13 +434,22 @@ class _UserHomePageState extends State<UserHomePage> {
                 Expanded(
                     child: Container(
                         margin: EdgeInsets.only(left: 16, right: 16, top: 5),
-                        child: Text(
-                          "Maintenance",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.inter(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => UserEventMaintenance()),
+                            );
+                          },
+                          child: Text(
+                            "Maintenance",
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.inter(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black),
+                          ),
                         ))),
                 Expanded(
                     child: Container(

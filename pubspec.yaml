@@ -33,6 +33,9 @@ dependencies:
   google_fonts:
   date_range_picker:
   awesome_dialog: ^2.1.0
+  table_calendar: ^2.2.3
+  
+
 
 dev_dependencies:
   flutter_test:
