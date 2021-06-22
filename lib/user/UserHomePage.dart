@@ -9,6 +9,7 @@ import 'userNotification.dart';
 import './Tickets/userTicket.dart';
 import './events/UserEvents.dart';
 import './events/UserEventMaintenance.dart';
+import 'Complaints/UserComplaintLog.dart';
 
 class UserHomePage extends StatefulWidget {
   @override
@@ -199,13 +200,13 @@ class _UserHomePageState extends State<UserHomePage> {
                   ]),
             ),
             Container(
-              height: 150.0,
+              height: 130.0,
               width: 120.0,
               margin: EdgeInsets.only(left: 15.0, right: 15.0),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8.0),
+                borderRadius: BorderRadius.circular(10.0),
                 image: DecorationImage(
-                  image: AssetImage('images/home.jpg'),
+                  image: AssetImage('images/HomePage.png'),
                   fit: BoxFit.fill,
                 ),
                 shape: BoxShape.rectangle,
@@ -399,7 +400,13 @@ class _UserHomePageState extends State<UserHomePage> {
                         height: 80,
                         margin: EdgeInsets.only(left: 20, right: 20, top: 10),
                         child: GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => UserComplaintLog()),
+                              );
+                            },
                             child: new Card(
                               color: Color(0xFF7Fb539),
                               shape: RoundedRectangleBorder(

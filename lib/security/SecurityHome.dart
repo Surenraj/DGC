@@ -80,7 +80,7 @@ class _SecurityHomeState extends State<SecurityHome> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.0),
                 image: DecorationImage(
-                  image: AssetImage('images/home.jpg'),
+                  image: AssetImage('images/HomePage.png'),
                   fit: BoxFit.fill,
                 ),
                 shape: BoxShape.rectangle,

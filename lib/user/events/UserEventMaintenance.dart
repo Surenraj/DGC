@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'UserTransactionDetails.dart';
 
 class UserEventMaintenance extends StatefulWidget {
   const UserEventMaintenance({Key? key}) : super(key: key);
@@ -256,7 +257,13 @@ class _UserEventMaintenanceState extends State<UserEventMaintenance> {
                   padding:
                       EdgeInsets.only(top: 10, left: 25, right: 25, bottom: 10),
                   color: Color(0xFF7Fb539),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => UserTransactionDetails()),
+                    );
+                  },
                   child: Text('Pay now',
                       style: TextStyle(
                           fontSize: 17,
