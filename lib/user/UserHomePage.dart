@@ -10,6 +10,8 @@ import './Tickets/userTicket.dart';
 import './events/UserEvents.dart';
 import './events/UserEventMaintenance.dart';
 import 'Complaints/UserComplaintLog.dart';
+import 'Others/userothers.dart';
+import 'SOS/sos&alert.dart';
 
 class UserHomePage extends StatefulWidget {
   @override
@@ -502,7 +504,13 @@ class _UserHomePageState extends State<UserHomePage> {
                         height: 80,
                         margin: EdgeInsets.only(left: 20, right: 20, top: 10),
                         child: GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => UserSosAlert()),
+                              );
+                            },
                             child: new Card(
                               color: Color(0xFF7Fb539),
                               shape: RoundedRectangleBorder(
@@ -524,7 +532,13 @@ class _UserHomePageState extends State<UserHomePage> {
                         height: 80,
                         margin: EdgeInsets.only(left: 20, right: 20, top: 10),
                         child: GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Userothers()),
+                              );
+                            },
                             child: new Card(
                               color: Color(0xFF7Fb539),
                               shape: RoundedRectangleBorder(

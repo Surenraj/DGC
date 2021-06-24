@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:multiselect_formfield/multiselect_formfield.dart';
+import 'package:table_calendar/table_calendar.dart';
 
 class UserCreateComplaint extends StatefulWidget {
   const UserCreateComplaint({Key? key}) : super(key: key);
@@ -12,8 +13,29 @@ class UserCreateComplaint extends StatefulWidget {
 
 class _UserCreateComplaintState extends State<UserCreateComplaint> {
   var _myActivities;
-  DateTime _startDate = DateTime.now();
-  DateTime _endDate = DateTime.now().add(Duration(days: 7));
+  // DateTime _startDate = DateTime.now();
+  // DateTime _endDate = DateTime.now().add(Duration(days: 7));
+  TimeOfDay? time;
+  TimeOfDay? picked;
+  CalendarController _controller = CalendarController();
+  String _selectedTime = "Select";
+
+  @override
+  void initState() {
+    super.initState();
+    time = TimeOfDay.now();
+  }
+
+  Future<Null> _openTimePicker(BuildContext context) async {
+    // ignore: unused_local_variable
+    final TimeOfDay? t =
+        await showTimePicker(context: context, initialTime: TimeOfDay.now());
+    if (t != null) {
+      setState(() {
+        _selectedTime = t.format(context);
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -255,20 +277,149 @@ class _UserCreateComplaintState extends State<UserCreateComplaint> {
                   borderRadius: BorderRadius.circular(8.0),
                 ),
                 textColor: Colors.black,
-                child: Text("Pick Date", style: TextStyle(fontSize: 16.0)),
+                child:
+                    Text("Pick Date & Time", style: TextStyle(fontSize: 16.0)),
                 borderSide: BorderSide(
                     color: Color(0xFF7Fb539),
                     style: BorderStyle.solid,
                     width: 1.5),
                 onPressed: () {
-                  showDatePicker(
-                          context: context,
-                          initialDate: _startDate,
-                          firstDate: new DateTime(DateTime.now().year - 50),
-                          lastDate: new DateTime(DateTime.now().year + 50))
-                      .then((date) {
-                    setState(() {});
-                  });
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return Dialog(
+                          shape: RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(20.0))),
+                          child: Container(
+                              height: 500,
+                              child: Column(
+                                children: <Widget>[
+                                  Container(
+                                    padding: const EdgeInsets.only(top: 10.0),
+                                    child: TableCalendar(
+                                        initialCalendarFormat:
+                                            CalendarFormat.month,
+                                        calendarStyle: CalendarStyle(
+                                            todayColor: Color(0xFF7Fb539),
+                                            selectedColor: Color(0xFF7Fb539),
+                                            todayStyle: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 22.0,
+                                                color: Colors.white)),
+                                        headerStyle: HeaderStyle(
+                                          centerHeaderTitle: false,
+                                          formatButtonDecoration: BoxDecoration(
+                                            color: Color(0xFF7Fb539),
+                                            borderRadius:
+                                                BorderRadius.circular(22.0),
+                                          ),
+                                          formatButtonTextStyle:
+                                              TextStyle(color: Colors.white),
+                                          formatButtonShowsNext: false,
+                                        ),
+                                        startingDayOfWeek:
+                                            StartingDayOfWeek.monday,
+                                        // onDaySelected: (date, events) {
+                                        //   print(date.toUtc());
+                                        // },
+                                        builders: CalendarBuilders(
+                                          selectedDayBuilder: (context, date,
+                                                  events) =>
+                                              Container(
+                                                  margin:
+                                                      const EdgeInsets.all(5.0),
+                                                  alignment: Alignment.center,
+                                                  decoration: BoxDecoration(
+                                                      color: Color(0xFF7Fb539),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              20.0)),
+                                                  child: Text(
+                                                    date.day.toString(),
+                                                    style: TextStyle(
+                                                        color: Colors.white),
+                                                  )),
+                                          todayDayBuilder: (context, date,
+                                                  events) =>
+                                              Container(
+                                                  margin:
+                                                      const EdgeInsets.all(5.0),
+                                                  alignment: Alignment.center,
+                                                  decoration: BoxDecoration(
+                                                      color: Color(0xFF7Fb539),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              20.0)),
+                                                  child: Text(
+                                                    date.day.toString(),
+                                                    style: TextStyle(
+                                                        color: Colors.white),
+                                                  )),
+                                        ),
+                                        calendarController: _controller),
+                                  ),
+                                  SizedBox(height: 30),
+                                  Container(
+                                      padding: const EdgeInsets.only(
+                                          left: 20.0, top: 10.0, right: 20.0),
+                                      height: 50,
+                                      width: 200,
+                                      child: OutlineButton(
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(8.0),
+                                          ),
+                                          textColor: Colors.black,
+                                          child: RichText(
+                                              text: TextSpan(
+                                                  text: "Time: ",
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      color: Color(0xFF7Fb539)),
+                                                  children: <TextSpan>[
+                                                TextSpan(
+                                                    text: "  " + _selectedTime,
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 13,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                    ))
+                                              ])),
+                                          borderSide: BorderSide(
+                                              color: Color(0xFF7Fb539),
+                                              style: BorderStyle.solid,
+                                              width: 1.5),
+                                          onPressed: () {
+                                            _openTimePicker(context);
+                                          })),
+                                  Container(
+                                    margin: const EdgeInsets.only(
+                                        top: 30, bottom: 40),
+                                    child: RaisedButton(
+                                        padding: EdgeInsets.only(
+                                            top: 10,
+                                            left: 25,
+                                            right: 25,
+                                            bottom: 10),
+                                        color: Color(0xFF7Fb539),
+                                        onPressed: () {},
+                                        child: Text('Select',
+                                            style: TextStyle(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w400,
+                                                color: Colors.white)),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(25.0))),
+                                  ),
+                                ],
+                              )),
+                        );
+                      });
                 },
               )),
           Container(
