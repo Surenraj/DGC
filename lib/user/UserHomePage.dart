@@ -12,6 +12,7 @@ import './events/UserEventMaintenance.dart';
 import 'Complaints/UserComplaintLog.dart';
 import 'Others/userothers.dart';
 import 'SOS/sos&alert.dart';
+import 'Amenitites/UserAmenitites.dart';
 
 class UserHomePage extends StatefulWidget {
   @override
@@ -351,7 +352,13 @@ class _UserHomePageState extends State<UserHomePage> {
                         height: 80,
                         margin: EdgeInsets.only(left: 20, right: 20, top: 10),
                         child: GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => UserAmenitites()),
+                              );
+                            },
                             child: new Card(
                               color: Color(0xFF7Fb539),
                               shape: RoundedRectangleBorder(
