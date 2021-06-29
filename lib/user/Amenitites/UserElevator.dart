@@ -35,7 +35,7 @@ class _UserElevatorState extends State<UserElevator> {
         children: [
           SizedBox(height: 30),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Column(
                 children: [
@@ -91,7 +91,7 @@ class _UserElevatorState extends State<UserElevator> {
                           fontWeight: FontWeight.w500)))),
           SizedBox(height: 10),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Column(
                 children: [
@@ -213,7 +213,7 @@ class _UserElevatorState extends State<UserElevator> {
                           fontWeight: FontWeight.w500)))),
           SizedBox(height: 10),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Column(
                 children: [
@@ -335,7 +335,7 @@ class _UserElevatorState extends State<UserElevator> {
                           fontWeight: FontWeight.w500)))),
           SizedBox(height: 10),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Column(
                 children: [

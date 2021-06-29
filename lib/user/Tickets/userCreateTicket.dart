@@ -60,13 +60,17 @@ class _UserCreateTicketState extends State<UserCreateTicket> {
                         TextSpan(text: "*", style: TextStyle(color: Colors.red))
                       ])))),
           Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Expanded(
-                  child: Container(
-                      width: 400,
-                      height: 80,
-                      margin: EdgeInsets.only(left: 20, right: 20, top: 10),
+              Column(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _hasBeenPressedBlock1 = !_hasBeenPressedBlock1;
+                      });
+                    },
+                    child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25.0),
                         boxShadow: <BoxShadow>[
@@ -77,35 +81,44 @@ class _UserCreateTicketState extends State<UserCreateTicket> {
                           ),
                         ],
                       ),
-                      child: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              _hasBeenPressedBlock1 = !_hasBeenPressedBlock1;
-                            });
-                          },
-                          child: new Card(
-                            elevation: 5.0,
-                            color: _hasBeenPressedBlock1
-                                ? Color(0xFF7Fb539)
-                                : Color(0xffe8e8e8),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0),
-                            ),
-                            child: Column(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 16,
-                                ),
-                                Image.asset("images/plumber_i.png",
-                                    width: 40, height: 40),
-                              ],
-                            ),
-                          )))),
-              Expanded(
-                  child: Container(
-                      width: 400,
-                      height: 80,
-                      margin: EdgeInsets.only(left: 20, right: 20, top: 10),
+                      child: SizedBox(
+                        width: 74,
+                        height: 75,
+                        child: Card(
+                          elevation: 5.0,
+                          color: _hasBeenPressedBlock1
+                              ? Color(0xFF7Fb539)
+                              : Color(0xffe8e8e8),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Image.asset("images/plumber_i.png"),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 7,
+                  ),
+                  Text("Plumber",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500))
+                ],
+              ),
+              Column(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _hasBeenPressedBlock2 = !_hasBeenPressedBlock2;
+                      });
+                    },
+                    child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25.0),
                         boxShadow: <BoxShadow>[
@@ -116,35 +129,44 @@ class _UserCreateTicketState extends State<UserCreateTicket> {
                           ),
                         ],
                       ),
-                      child: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              _hasBeenPressedBlock2 = !_hasBeenPressedBlock2;
-                            });
-                          },
-                          child: new Card(
-                            elevation: 5.0,
-                            color: _hasBeenPressedBlock2
-                                ? Color(0xFF7Fb539)
-                                : Color(0xffe8e8e8),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0),
-                            ),
-                            child: Column(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 16,
-                                ),
-                                Image.asset("images/Cleaner.png",
-                                    width: 40, height: 40),
-                              ],
-                            ),
-                          )))),
-              Expanded(
-                  child: Container(
-                      width: 400,
-                      height: 80,
-                      margin: EdgeInsets.only(left: 20, right: 20, top: 10),
+                      child: SizedBox(
+                        width: 74,
+                        height: 75,
+                        child: Card(
+                          elevation: 5.0,
+                          color: _hasBeenPressedBlock2
+                              ? Color(0xFF7Fb539)
+                              : Color(0xffe8e8e8),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Image.asset("images/Cleaner.png"),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 7,
+                  ),
+                  Text("Cleaner",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500))
+                ],
+              ),
+              Column(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _hasBeenPressedBlock3 = !_hasBeenPressedBlock3;
+                      });
+                    },
+                    child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25.0),
                         boxShadow: <BoxShadow>[
@@ -155,78 +177,50 @@ class _UserCreateTicketState extends State<UserCreateTicket> {
                           ),
                         ],
                       ),
-                      child: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              _hasBeenPressedBlock3 = !_hasBeenPressedBlock3;
-                            });
-                          },
-                          child: new Card(
-                            elevation: 5.0,
-                            color: _hasBeenPressedBlock3
-                                ? Color(0xFF7Fb539)
-                                : Color(0xffe8e8e8),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0),
-                            ),
-                            child: Column(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 16,
-                                ),
-                                Image.asset("images/electric_i.png",
-                                    width: 40, height: 40),
-                              ],
-                            ),
-                          )))),
+                      child: SizedBox(
+                        width: 74,
+                        height: 75,
+                        child: Card(
+                          elevation: 5.0,
+                          color: _hasBeenPressedBlock3
+                              ? Color(0xFF7Fb539)
+                              : Color(0xffe8e8e8),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Image.asset("images/electric_i.png"),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 7,
+                  ),
+                  Text("Electrican",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500))
+                ],
+              ),
             ],
           ),
+          SizedBox(height: 20),
           Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Expanded(
-                  child: Container(
-                      margin: EdgeInsets.only(left: 16, right: 16, top: 5),
-                      child: Text(
-                        "Plumber",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.inter(
-                            fontSize: 13,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black),
-                      ))),
-              Expanded(
-                  child: Container(
-                      margin: EdgeInsets.only(left: 16, right: 16, top: 5),
-                      child: Text(
-                        "Cleaner",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.inter(
-                            fontSize: 13,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black),
-                      ))),
-              Expanded(
-                  child: Container(
-                      margin: EdgeInsets.only(left: 16, right: 16, top: 5),
-                      child: Text(
-                        "Electrican",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.inter(
-                            fontSize: 13,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black),
-                      ))),
-            ],
-          ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Expanded(
-                  child: Container(
-                      width: 400,
-                      height: 80,
-                      margin: EdgeInsets.only(left: 20, right: 20, top: 10),
+              Column(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _hasBeenPressedBlock4 = !_hasBeenPressedBlock4;
+                      });
+                    },
+                    child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25.0),
                         boxShadow: <BoxShadow>[
@@ -237,35 +231,44 @@ class _UserCreateTicketState extends State<UserCreateTicket> {
                           ),
                         ],
                       ),
-                      child: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              _hasBeenPressedBlock4 = !_hasBeenPressedBlock4;
-                            });
-                          },
-                          child: new Card(
-                            elevation: 5.0,
-                            color: _hasBeenPressedBlock4
-                                ? Color(0xFF7Fb539)
-                                : Color(0xffe8e8e8),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0),
-                            ),
-                            child: Column(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 16,
-                                ),
-                                Image.asset("images/mason_i.png",
-                                    width: 40, height: 40),
-                              ],
-                            ),
-                          )))),
-              Expanded(
-                  child: Container(
-                      width: 400,
-                      height: 80,
-                      margin: EdgeInsets.only(left: 20, right: 20, top: 10),
+                      child: SizedBox(
+                        width: 74,
+                        height: 75,
+                        child: Card(
+                          elevation: 5.0,
+                          color: _hasBeenPressedBlock4
+                              ? Color(0xFF7Fb539)
+                              : Color(0xffe8e8e8),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Image.asset("images/mason_i.png"),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 7,
+                  ),
+                  Text("Mason",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500))
+                ],
+              ),
+              Column(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _hasBeenPressedBlock5 = !_hasBeenPressedBlock5;
+                      });
+                    },
+                    child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25.0),
                         boxShadow: <BoxShadow>[
@@ -276,91 +279,70 @@ class _UserCreateTicketState extends State<UserCreateTicket> {
                           ),
                         ],
                       ),
-                      child: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              _hasBeenPressedBlock5 = !_hasBeenPressedBlock5;
-                            });
-                          },
-                          child: new Card(
-                            elevation: 5.0,
-                            color: _hasBeenPressedBlock5
-                                ? Color(0xFF7Fb539)
-                                : Color(0xffe8e8e8),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0),
-                            ),
-                            child: Column(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 16,
-                                ),
-                                Image.asset("images/other_i.png",
-                                    width: 40, height: 40),
-                              ],
-                            ),
-                          )))),
-              Expanded(
-                  child: Container(
-                      width: 400,
-                      height: 80,
-                      margin: EdgeInsets.only(left: 20, right: 20, top: 10),
-                      child: GestureDetector(
-                          onTap: () {},
-                          child: new Card(
-                            elevation: 0.0,
-                            color: Colors.white,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0),
-                            ),
-                            child: Column(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 14,
-                                ),
-                                // Image.asset("images/event.png",
-                                //     width: 40, height: 40),
-                              ],
-                            ),
-                          )))),
-            ],
-          ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Expanded(
-                  child: Container(
-                      margin: EdgeInsets.only(left: 16, right: 16, top: 5),
-                      child: Text(
-                        "Mason",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.inter(
-                            fontSize: 13,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black),
-                      ))),
-              Expanded(
-                  child: Container(
-                      margin: EdgeInsets.only(left: 16, right: 16, top: 5),
-                      child: Text(
-                        "Other",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.inter(
-                            fontSize: 13,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black),
-                      ))),
-              Expanded(
-                  child: Container(
-                      margin: EdgeInsets.only(left: 16, right: 16, top: 5),
-                      child: Text(
-                        "",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.inter(
-                            fontSize: 13,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.white),
-                      ))),
+                      child: SizedBox(
+                        width: 74,
+                        height: 75,
+                        child: Card(
+                          elevation: 5.0,
+                          color: _hasBeenPressedBlock5
+                              ? Color(0xFF7Fb539)
+                              : Color(0xffe8e8e8),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Image.asset("images/other_i.png"),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 7,
+                  ),
+                  Text("Other",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500))
+                ],
+              ),
+              Column(
+                children: [
+                  GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25.0),
+                      ),
+                      child: SizedBox(
+                        width: 74,
+                        height: 75,
+                        child: Card(
+                          elevation: 0.0,
+                          color: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            // child: Image.asset("images/electric_i.png"),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 7,
+                  ),
+                  Text("",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500))
+                ],
+              ),
             ],
           ),
           Container(
@@ -475,6 +457,7 @@ class _UserCreateTicketState extends State<UserCreateTicket> {
                                   BorderRadius.all(Radius.circular(20.0))),
                           child: Container(
                               height: 380,
+                              width: MediaQuery.of(context).size.width / 15,
                               child: Column(
                                 children: <Widget>[
                                   SizedBox(height: 30),

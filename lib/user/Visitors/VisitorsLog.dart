@@ -205,6 +205,7 @@ class _VisitorsLogState extends State<VisitorsLog> {
                                         fontWeight: FontWeight.w500,
                                         color: Color(0xFF7Fb539)))),
                           ]),
+                      SizedBox(width: MediaQuery.of(context).size.width / 2.5),
                       Column(children: <Widget>[
                         Container(
                             padding: const EdgeInsets.only(top: 13.0),

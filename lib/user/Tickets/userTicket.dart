@@ -137,69 +137,72 @@ class _UserTicketState extends State<UserTicket> {
             )
           ],
         ),
-        body: SingleChildScrollView(
-          child: GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => UserTicketDetails()),
-                );
-              },
-              child: Container(
-                margin: EdgeInsets.only(left: 10, right: 10, top: 10),
-                padding: const EdgeInsets.all(15),
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Color(0xFF7Fb539),
-                    width: 1.0,
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => UserTicketDetails()),
+                  );
+                },
+                child: Container(
+                  margin: EdgeInsets.only(left: 10, right: 10, top: 10),
+                  padding: const EdgeInsets.all(15),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Color(0xFF7Fb539),
+                      width: 1.0,
+                    ),
+                    borderRadius: BorderRadius.circular(8),
                   ),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Container(
-                                alignment: Alignment.topLeft,
-                                child: Text("Plumber",
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w400,
-                                        color: Color(0xFF7Fb539)))),
-                            Container(
-                                padding: const EdgeInsets.only(top: 5.0),
-                                child: Text("Yesterday, 08.00 pm",
-                                    textAlign: TextAlign.left,
-                                    style: TextStyle(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.black))),
-                          ]),
-                      Column(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: <Widget>[
-                            Container(
-                                child: Text("Processing",
-                                    textAlign: TextAlign.left,
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.black))),
-                            Container(
-                                padding: const EdgeInsets.only(top: 5.0),
-                                child: Text("ABCD1234",
-                                    textAlign: TextAlign.right,
-                                    style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w400,
-                                        color: Color(0xFF7Fb539)))),
-                          ]),
-                    ]),
-              )),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Container(
+                                  alignment: Alignment.topLeft,
+                                  child: Text("Plumber",
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w400,
+                                          color: Color(0xFF7Fb539)))),
+                              Container(
+                                  padding: const EdgeInsets.only(top: 5.0),
+                                  child: Text("Yesterday, 08.00 pm",
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.black))),
+                            ]),
+                        Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: <Widget>[
+                              Container(
+                                  child: Text("Processing",
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.black))),
+                              Container(
+                                  padding: const EdgeInsets.only(top: 5.0),
+                                  child: Text("ABCD1234",
+                                      textAlign: TextAlign.right,
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w400,
+                                          color: Color(0xFF7Fb539)))),
+                            ]),
+                      ]),
+                )),
+          ),
         ),
         floatingActionButton: FloatingActionButton(
             child: Icon(Icons.add),

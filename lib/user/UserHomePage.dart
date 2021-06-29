@@ -205,7 +205,10 @@ class _UserHomePageState extends State<UserHomePage> {
             Container(
               height: 130.0,
               width: 120.0,
-              margin: EdgeInsets.only(left: 15.0, right: 15.0),
+              margin: EdgeInsets.only(
+                  top: MediaQuery.of(context).size.height / 30,
+                  left: MediaQuery.of(context).size.width / 25,
+                  right: MediaQuery.of(context).size.width / 25),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
                 image: DecorationImage(
@@ -215,390 +218,459 @@ class _UserHomePageState extends State<UserHomePage> {
                 shape: BoxShape.rectangle,
               ),
             ),
-            SizedBox(height: 10.0),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Expanded(
-                    child: Container(
-                        width: 400,
-                        height: 80,
-                        margin: EdgeInsets.only(left: 20, right: 20, top: 10),
-                        child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => VisitorsLog()),
-                              );
-                            },
-                            child: new Card(
-                              color: Color(0xFF7Fb539),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20.0),
+            Padding(
+              padding:
+                  EdgeInsets.only(top: MediaQuery.of(context).size.height / 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Column(
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => VisitorsLog()),
+                          );
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(18),
+                            color: Color(0xFF7Fb539),
+                            boxShadow: <BoxShadow>[
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.6),
+                                blurRadius: 5,
+                                offset: Offset(5, 3),
                               ),
-                              child: Column(
-                                children: <Widget>[
-                                  SizedBox(
-                                    height: 14,
-                                  ),
-                                  Image.asset("images/visitor.png",
-                                      width: 40, height: 40),
-                                ],
-                              ),
-                            )))),
-                Expanded(
-                    child: Container(
-                        width: 400,
-                        height: 80,
-                        margin: EdgeInsets.only(left: 20, right: 20, top: 10),
-                        child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => UserTicket()),
-                              );
-                            },
-                            child: new Card(
-                              color: Color(0xFF7Fb539),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20.0),
-                              ),
-                              child: Column(
-                                children: <Widget>[
-                                  SizedBox(
-                                    height: 14,
-                                  ),
-                                  Image.asset("images/ticket.png",
-                                      width: 40, height: 40),
-                                ],
-                              ),
-                            )))),
-                Expanded(
-                    child: Container(
-                        width: 400,
-                        height: 80,
-                        margin: EdgeInsets.only(left: 20, right: 20, top: 10),
-                        child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => UserEvents()),
-                              );
-                            },
-                            child: new Card(
-                              color: Color(0xFF7Fb539),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20.0),
-                              ),
-                              child: Column(
-                                children: <Widget>[
-                                  SizedBox(
-                                    height: 14,
-                                  ),
-                                  Image.asset("images/event.png",
-                                      width: 40, height: 40),
-                                ],
-                              ),
-                            )))),
-              ],
-            ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Expanded(
-                    child: Container(
-                        margin: EdgeInsets.only(left: 16, right: 16, top: 5),
-                        child: Text(
-                          "Visitors",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.inter(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black),
-                        ))),
-                Expanded(
-                    child: Container(
-                        margin: EdgeInsets.only(left: 16, right: 16, top: 5),
-                        child: Text(
-                          "Tickets",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.inter(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black),
-                        ))),
-                Expanded(
-                    child: Container(
-                        margin: EdgeInsets.only(left: 16, right: 16, top: 5),
-                        child: Text(
-                          "Events",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.inter(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black),
-                        ))),
-              ],
-            ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Expanded(
-                    child: Container(
-                        width: 400,
-                        height: 80,
-                        margin: EdgeInsets.only(left: 20, right: 20, top: 10),
-                        child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => UserAmenitites()),
-                              );
-                            },
-                            child: new Card(
-                              color: Color(0xFF7Fb539),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20.0),
-                              ),
-                              child: Column(
-                                children: <Widget>[
-                                  SizedBox(
-                                    height: 14,
-                                  ),
-                                  Image.asset("images/amenities.png",
-                                      width: 40, height: 40),
-                                ],
-                              ),
-                            )))),
-                Expanded(
-                    child: Container(
-                        width: 400,
-                        height: 80,
-                        margin: EdgeInsets.only(left: 20, right: 20, top: 10),
-                        child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        UserEventMaintenance()),
-                              );
-                            },
-                            child: new Card(
-                              color: Color(0xFF7Fb539),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20.0),
-                              ),
-                              child: Column(
-                                children: <Widget>[
-                                  SizedBox(
-                                    height: 14,
-                                  ),
-                                  Image.asset("images/PAY.png",
-                                      width: 45, height: 40),
-                                ],
-                              ),
-                            )))),
-                Expanded(
-                    child: Container(
-                        width: 400,
-                        height: 80,
-                        margin: EdgeInsets.only(left: 20, right: 20, top: 10),
-                        child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => UserComplaintLog()),
-                              );
-                            },
-                            child: new Card(
-                              color: Color(0xFF7Fb539),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20.0),
-                              ),
-                              child: Column(
-                                children: <Widget>[
-                                  SizedBox(
-                                    height: 14,
-                                  ),
-                                  Image.asset("images/complaint.png",
-                                      width: 40, height: 40),
-                                ],
-                              ),
-                            )))),
-              ],
-            ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Expanded(
-                    child: Container(
-                        margin: EdgeInsets.only(left: 16, right: 16, top: 5),
-                        child: Text(
-                          "Amenities",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.inter(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black),
-                        ))),
-                Expanded(
-                    child: Container(
-                        margin: EdgeInsets.only(left: 16, right: 16, top: 5),
-                        child: GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => UserEventMaintenance()),
-                            );
-                          },
-                          child: Text(
-                            "Maintenance",
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.inter(
-                                fontSize: 13,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.black),
+                            ],
                           ),
-                        ))),
-                Expanded(
-                    child: Container(
-                        margin: EdgeInsets.only(left: 16, right: 16, top: 5),
-                        child: Text(
-                          "Complaints",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.inter(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black),
-                        ))),
+                          child: SizedBox(
+                            width: 74,
+                            height: 75,
+                            child: Card(
+                              elevation: 0.0,
+                              color: Color(0xFF7Fb539),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(12.0),
+                                child: Image.asset("images/visitor.png"),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 7,
+                      ),
+                      Text("Visitors",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500))
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => UserTicket()),
+                          );
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(18),
+                            color: Color(0xFF7Fb539),
+                            boxShadow: <BoxShadow>[
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.6),
+                                blurRadius: 5,
+                                offset: Offset(5, 3),
+                              ),
+                            ],
+                          ),
+                          child: SizedBox(
+                            width: 74,
+                            height: 75,
+                            child: Card(
+                              elevation: 0.0,
+                              color: Color(0xFF7Fb539),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(12.0),
+                                child: Image.asset("images/ticket.png"),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 7,
+                      ),
+                      Text("Tickets",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500))
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => UserEvents()),
+                          );
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(18),
+                            color: Color(0xFF7Fb539),
+                            boxShadow: <BoxShadow>[
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.6),
+                                blurRadius: 5,
+                                offset: Offset(5, 3),
+                              ),
+                            ],
+                          ),
+                          child: SizedBox(
+                            width: 74,
+                            height: 75,
+                            child: Card(
+                              elevation: 0.0,
+                              color: Color(0xFF7Fb539),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(12.0),
+                                child: Image.asset("images/event_i.png"),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 7,
+                      ),
+                      Text("Events",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500))
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: MediaQuery.of(context).size.height / 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => UserAmenitites()),
+                        );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(18),
+                          color: Color(0xFF7Fb539),
+                          boxShadow: <BoxShadow>[
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.6),
+                              blurRadius: 5,
+                              offset: Offset(5, 3),
+                            ),
+                          ],
+                        ),
+                        child: SizedBox(
+                          width: 74,
+                          height: 75,
+                          child: Card(
+                            elevation: 0.0,
+                            color: Color(0xFF7Fb539),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(12.0),
+                              child: Image.asset("images/amenities_i.png"),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 7,
+                    ),
+                    Text("Amenities",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500))
+                  ],
+                ),
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => UserEventMaintenance()),
+                        );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(18),
+                          color: Color(0xFF7Fb539),
+                          boxShadow: <BoxShadow>[
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.6),
+                              blurRadius: 5,
+                              offset: Offset(5, 3),
+                            ),
+                          ],
+                        ),
+                        child: SizedBox(
+                          width: 74,
+                          height: 75,
+                          child: Card(
+                            elevation: 0.0,
+                            color: Color(0xFF7Fb539),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(12.0),
+                              child: Image.asset("images/PAY.png"),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 7,
+                    ),
+                    Text("Maintenance",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500))
+                  ],
+                ),
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => UserComplaintLog()),
+                        );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(18),
+                          color: Color(0xFF7Fb539),
+                          boxShadow: <BoxShadow>[
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.6),
+                              blurRadius: 5,
+                              offset: Offset(5, 3),
+                            ),
+                          ],
+                        ),
+                        child: SizedBox(
+                          width: 74,
+                          height: 75,
+                          child: Card(
+                            elevation: 0.0,
+                            color: Color(0xFF7Fb539),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(12.0),
+                              child: Image.asset("images/complaint.png"),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 7,
+                    ),
+                    Text("Complaints",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500))
+                  ],
+                ),
               ],
             ),
+            SizedBox(height: MediaQuery.of(context).size.height / 30),
             Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Expanded(
-                    child: Container(
-                        width: 400,
-                        height: 80,
-                        margin: EdgeInsets.only(left: 20, right: 20, top: 10),
-                        child: GestureDetector(
-                            onTap: () {},
-                            child: new Card(
-                              color: Color(0xFF7Fb539),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20.0),
-                              ),
-                              child: Column(
-                                children: <Widget>[
-                                  SizedBox(
-                                    height: 14,
-                                  ),
-                                  Image.asset("images/vaccent.png",
-                                      width: 40, height: 40),
-                                ],
-                              ),
-                            )))),
-                Expanded(
-                    child: Container(
-                        width: 400,
-                        height: 80,
-                        margin: EdgeInsets.only(left: 20, right: 20, top: 10),
-                        child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => UserSosAlert()),
-                              );
-                            },
-                            child: new Card(
-                              color: Color(0xFF7Fb539),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20.0),
-                              ),
-                              child: Column(
-                                children: <Widget>[
-                                  SizedBox(
-                                    height: 14,
-                                  ),
-                                  Image.asset("images/sos.png",
-                                      width: 45, height: 40),
-                                ],
-                              ),
-                            )))),
-                Expanded(
-                    child: Container(
-                        width: 400,
-                        height: 80,
-                        margin: EdgeInsets.only(left: 20, right: 20, top: 10),
-                        child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Userothers()),
-                              );
-                            },
-                            child: new Card(
-                              color: Color(0xFF7Fb539),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20.0),
-                              ),
-                              child: Column(
-                                children: <Widget>[
-                                  SizedBox(
-                                    height: 14,
-                                  ),
-                                  Image.asset("images/other.png",
-                                      width: 40, height: 40),
-                                ],
-                              ),
-                            )))),
-              ],
-            ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Expanded(
-                    child: Container(
-                        margin: EdgeInsets.only(left: 16, right: 16, top: 5),
-                        child: Text(
-                          "House Vaccent",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.inter(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black),
-                        ))),
-                Expanded(
-                    child: Container(
-                        margin: EdgeInsets.only(left: 16, right: 16, top: 5),
-                        child: Text(
-                          "Alert & SOS",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.inter(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black),
-                        ))),
-                Expanded(
-                    child: Container(
-                        margin: EdgeInsets.only(left: 16, right: 16, top: 5),
-                        child: Text(
-                          "Others",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.inter(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black),
-                        ))),
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {},
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(18),
+                          color: Color(0xFF7Fb539),
+                          boxShadow: <BoxShadow>[
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.6),
+                              blurRadius: 5,
+                              offset: Offset(5, 3),
+                            ),
+                          ],
+                        ),
+                        child: SizedBox(
+                          width: 74,
+                          height: 75,
+                          child: Card(
+                            elevation: 0.0,
+                            color: Color(0xFF7Fb539),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(12.0),
+                              child: Image.asset("images/vaccents_i.png"),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 7,
+                    ),
+                    Text("House Vaccent",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 13.5,
+                            fontWeight: FontWeight.w500))
+                  ],
+                ),
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => UserSosAlert()),
+                        );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(18),
+                          color: Color(0xFF7Fb539),
+                          boxShadow: <BoxShadow>[
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.6),
+                              blurRadius: 5,
+                              offset: Offset(5, 3),
+                            ),
+                          ],
+                        ),
+                        child: SizedBox(
+                          width: 74,
+                          height: 75,
+                          child: Card(
+                            elevation: 0.0,
+                            color: Color(0xFF7Fb539),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(12.0),
+                              child: Image.asset("images/sos.png"),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 7,
+                    ),
+                    Text("Alert & SOS",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500))
+                  ],
+                ),
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Userothers()),
+                        );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(18),
+                          color: Color(0xFF7Fb539),
+                          boxShadow: <BoxShadow>[
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.6),
+                              blurRadius: 5,
+                              offset: Offset(5, 3),
+                            ),
+                          ],
+                        ),
+                        child: SizedBox(
+                          width: 74,
+                          height: 75,
+                          child: Card(
+                            elevation: 0.0,
+                            color: Color(0xFF7Fb539),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(12.0),
+                              child: Image.asset("images/other.png"),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 7,
+                    ),
+                    Text("Others",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500))
+                  ],
+                ),
               ],
             ),
           ],

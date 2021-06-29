@@ -140,6 +140,8 @@ class _AdminVisitorsLogState extends State<AdminVisitorsLog> {
                                             fontWeight: FontWeight.w500,
                                             color: Color(0xFF7Fb539)))),
                               ]),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 2.5),
                           Column(children: <Widget>[
                             Container(
                                 padding: const EdgeInsets.only(top: 13.0),
@@ -241,6 +243,8 @@ class _AdminVisitorsLogState extends State<AdminVisitorsLog> {
                                             fontWeight: FontWeight.w500,
                                             color: Color(0xFF7Fb539)))),
                               ]),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 2.5),
                           Column(children: <Widget>[
                             Container(
                                 padding: const EdgeInsets.only(top: 13.0),

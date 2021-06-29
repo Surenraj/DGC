@@ -49,79 +49,82 @@ class _UserEventMaintenanceState extends State<UserEventMaintenance> {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Stack(children: <Widget>[
-                    Row(children: <Widget>[
-                      CircleAvatar(
-                        backgroundColor: Colors.grey.shade300,
-                        radius: 20.0,
-                        child: Image.asset('images/cancel.png',
-                            height: 15, width: 15),
-                      ),
-                      Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Container(
-                                alignment: Alignment.topLeft,
-                                padding:
-                                    const EdgeInsets.only(left: 13.0, top: 3.0),
-                                child: RichText(
-                                    text: TextSpan(
-                                        text: "Maintenance",
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: <Widget>[
+                          CircleAvatar(
+                            backgroundColor: Colors.grey.shade300,
+                            radius: 20.0,
+                            child: Image.asset('images/cancel.png',
+                                height: 15, width: 15),
+                          ),
+                          Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Container(
+                                    alignment: Alignment.topLeft,
+                                    padding: const EdgeInsets.only(
+                                        left: 13.0, top: 3.0),
+                                    child: RichText(
+                                        text: TextSpan(
+                                            text: "Maintenance",
+                                            style: TextStyle(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w400,
+                                                color: Colors.black),
+                                            children: <TextSpan>[
+                                          TextSpan(
+                                            text: "    ₹2015",
+                                            style: TextStyle(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w500,
+                                                color: Color(0xFF7Fb539)),
+                                          )
+                                        ]))),
+                                Container(
+                                    padding: const EdgeInsets.only(
+                                        left: 13.0, top: 5.0),
+                                    child: Text(
+                                        "Due Date is Near Tap to pay" +
+                                            "\n" +
+                                            "maintenance",
+                                        textAlign: TextAlign.left,
                                         style: TextStyle(
-                                            fontSize: 16,
+                                            fontSize: 14,
                                             fontWeight: FontWeight.w400,
-                                            color: Colors.black),
-                                        children: <TextSpan>[
-                                      TextSpan(
-                                        text: "    ₹2015",
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w500,
-                                            color: Color(0xFF7Fb539)),
-                                      )
-                                    ]))),
-                            Container(
-                                padding:
-                                    const EdgeInsets.only(left: 13.0, top: 5.0),
-                                child: Text(
-                                    "Due Date is Near Tap to pay" +
-                                        "\n" +
-                                        "maintenance",
-                                    textAlign: TextAlign.left,
-                                    style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w400,
-                                        color: Color(0xFF7Fb539)))),
-                          ]),
-                      Column(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: <Widget>[
-                            Container(
-                                margin: const EdgeInsets.only(left: 20.0),
-                                decoration: BoxDecoration(
-                                    color: Color(0xFF7Fb539),
-                                    borderRadius: BorderRadius.all(
-                                      Radius.circular(20),
+                                            color: Color(0xFF7Fb539)))),
+                              ]),
+                          Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: <Widget>[
+                                Container(
+                                    margin: const EdgeInsets.only(left: 20.0),
+                                    decoration: BoxDecoration(
+                                        color: Color(0xFF7Fb539),
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(20),
+                                        )),
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 20.0,
+                                          right: 20.0,
+                                          top: 5.0,
+                                          bottom: 5),
+                                      child: Text("Pay",
+                                          style:
+                                              TextStyle(color: Colors.white)),
                                     )),
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 20.0,
-                                      right: 20.0,
-                                      top: 5.0,
-                                      bottom: 5),
-                                  child: Text("Pay",
-                                      style: TextStyle(color: Colors.white)),
-                                )),
-                            Container(
-                                padding: const EdgeInsets.only(top: 5.0),
-                                child: Text(" ",
-                                    textAlign: TextAlign.right,
-                                    style: TextStyle(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.black))),
-                          ]),
-                    ])
+                                Container(
+                                    padding: const EdgeInsets.only(top: 5.0),
+                                    child: Text(" ",
+                                        textAlign: TextAlign.right,
+                                        style: TextStyle(
+                                            fontSize: 13,
+                                            fontWeight: FontWeight.w400,
+                                            color: Colors.black))),
+                              ]),
+                        ])
                   ])),
               Container(
                   padding:

@@ -39,7 +39,7 @@ class _UserAmenititesState extends State<UserAmenitites> {
             margin: const EdgeInsets.only(top: 20),
             child: Center(
                 child: ButtonTheme(
-                    minWidth: 300.0,
+                    minWidth: 350.0,
                     height: 50.0,
                     child: RaisedButton(
                         color: Color(0xFF7Fb539).withOpacity(0.6),
@@ -63,7 +63,7 @@ class _UserAmenititesState extends State<UserAmenitites> {
             margin: const EdgeInsets.only(top: 20),
             child: Center(
                 child: ButtonTheme(
-                    minWidth: 300.0,
+                    minWidth: 350.0,
                     height: 50.0,
                     child: RaisedButton(
                         color: Color(0xFF7Fb539).withOpacity(0.6),
@@ -88,7 +88,7 @@ class _UserAmenititesState extends State<UserAmenitites> {
             margin: const EdgeInsets.only(top: 20),
             child: Center(
                 child: ButtonTheme(
-                    minWidth: 300.0,
+                    minWidth: 350.0,
                     height: 50.0,
                     child: RaisedButton(
                         color: Color(0xFF7Fb539).withOpacity(0.6),
@@ -107,7 +107,7 @@ class _UserAmenititesState extends State<UserAmenitites> {
             margin: const EdgeInsets.only(top: 20),
             child: Center(
                 child: ButtonTheme(
-                    minWidth: 300.0,
+                    minWidth: 350.0,
                     height: 50.0,
                     child: RaisedButton(
                         color: Color(0xFF7Fb539).withOpacity(0.6),

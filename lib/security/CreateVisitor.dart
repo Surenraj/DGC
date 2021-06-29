@@ -89,7 +89,7 @@ class _SecurityCreateVisitorState extends State<SecurityCreateVisitor> {
                     })
                   },
                 ),
-                SizedBox(width: 20),
+                SizedBox(width: MediaQuery.of(context).size.width / 15),
                 RaisedButton(
                   child: new Text('Block 1'),
                   textColor:
@@ -106,7 +106,7 @@ class _SecurityCreateVisitorState extends State<SecurityCreateVisitor> {
                     })
                   },
                 ),
-                SizedBox(width: 20),
+                SizedBox(width: MediaQuery.of(context).size.width / 15),
                 RaisedButton(
                   child: new Text('Block 1'),
                   textColor:
@@ -123,7 +123,7 @@ class _SecurityCreateVisitorState extends State<SecurityCreateVisitor> {
                     })
                   },
                 ),
-                SizedBox(width: 20),
+                SizedBox(width: MediaQuery.of(context).size.width / 15),
                 RaisedButton(
                   child: new Text('Block 1'),
                   textColor:
@@ -175,7 +175,7 @@ class _SecurityCreateVisitorState extends State<SecurityCreateVisitor> {
                     })
                   },
                 ),
-                SizedBox(width: 20),
+                SizedBox(width: MediaQuery.of(context).size.width / 15),
                 RaisedButton(
                   child: new Text('101'),
                   textColor:
@@ -192,7 +192,7 @@ class _SecurityCreateVisitorState extends State<SecurityCreateVisitor> {
                     })
                   },
                 ),
-                SizedBox(width: 20),
+                SizedBox(width: MediaQuery.of(context).size.width / 15),
                 RaisedButton(
                   child: new Text('101'),
                   textColor:
@@ -209,7 +209,7 @@ class _SecurityCreateVisitorState extends State<SecurityCreateVisitor> {
                     })
                   },
                 ),
-                SizedBox(width: 20),
+                SizedBox(width: MediaQuery.of(context).size.width / 15),
                 RaisedButton(
                   child: new Text('101'),
                   textColor:
@@ -260,7 +260,7 @@ class _SecurityCreateVisitorState extends State<SecurityCreateVisitor> {
                     })
                   },
                 ),
-                SizedBox(width: 20),
+                SizedBox(width: MediaQuery.of(context).size.width / 15),
                 RaisedButton(
                   child: new Text('1'),
                   textColor: _hasBeenPressedFlat2 ? Colors.white : Colors.black,
@@ -276,7 +276,7 @@ class _SecurityCreateVisitorState extends State<SecurityCreateVisitor> {
                     })
                   },
                 ),
-                SizedBox(width: 20),
+                SizedBox(width: MediaQuery.of(context).size.width / 15),
                 RaisedButton(
                   child: new Text('1'),
                   textColor: _hasBeenPressedFlat3 ? Colors.white : Colors.black,
@@ -292,7 +292,7 @@ class _SecurityCreateVisitorState extends State<SecurityCreateVisitor> {
                     })
                   },
                 ),
-                SizedBox(width: 20),
+                SizedBox(width: MediaQuery.of(context).size.width / 15),
                 RaisedButton(
                   child: new Text('1'),
                   textColor: _hasBeenPressedFlat4 ? Colors.white : Colors.black,

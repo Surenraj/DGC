@@ -292,7 +292,8 @@ class _UserCreateComplaintState extends State<UserCreateComplaint> {
                               borderRadius:
                                   BorderRadius.all(Radius.circular(20.0))),
                           child: Container(
-                              height: 500,
+                              height: 550,
+                              width: MediaQuery.of(context).size.width / 15,
                               child: Column(
                                 children: <Widget>[
                                   Container(
@@ -359,7 +360,7 @@ class _UserCreateComplaintState extends State<UserCreateComplaint> {
                                         ),
                                         calendarController: _controller),
                                   ),
-                                  SizedBox(height: 30),
+                                  SizedBox(height: 40),
                                   Container(
                                       padding: const EdgeInsets.only(
                                           left: 20.0, top: 10.0, right: 20.0),
@@ -438,6 +439,7 @@ class _UserCreateComplaintState extends State<UserCreateComplaint> {
                                   BorderRadius.all(Radius.circular(20.0))),
                           child: Container(
                               height: 500,
+                              width: MediaQuery.of(context).size.width / 15,
                               child: Column(
                                 children: <Widget>[
                                   SizedBox(height: 30),

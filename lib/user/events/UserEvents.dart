@@ -123,7 +123,7 @@ class _UserEventsState extends State<UserEvents> {
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                             color: Theme.of(context).primaryColor,
-                            borderRadius: BorderRadius.circular(20.0)),
+                            borderRadius: BorderRadius.circular(50.0)),
                         child: Text(
                           date.day.toString(),
                           style: TextStyle(color: Colors.white),
@@ -133,7 +133,7 @@ class _UserEventsState extends State<UserEvents> {
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                             color: Color(0xFF7Fb539),
-                            borderRadius: BorderRadius.circular(20.0)),
+                            borderRadius: BorderRadius.circular(50.0)),
                         child: Text(
                           date.day.toString(),
                           style: TextStyle(color: Colors.white),

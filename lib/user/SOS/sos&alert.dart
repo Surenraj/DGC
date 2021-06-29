@@ -75,7 +75,7 @@ class _UserSosAlertState extends State<UserSosAlert> {
             ),
             SizedBox(height: 15),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Column(
                   children: [
@@ -146,8 +146,8 @@ class _UserSosAlertState extends State<UserSosAlert> {
                           ],
                         ),
                         child: SizedBox(
-                          width: 69,
-                          height: 70,
+                          width: 74,
+                          height: 75,
                           child: Card(
                             elevation: 0.0,
                             color: Color(0xFFE10000),
@@ -163,16 +163,15 @@ class _UserSosAlertState extends State<UserSosAlert> {
                       ),
                     ),
                     SizedBox(
-                      height: 7,
+                      height: 8,
                     ),
                     Text("Fire",
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 13,
+                            fontSize: 15,
                             fontWeight: FontWeight.w800))
                   ],
                 ),
-                SizedBox(width: 10),
                 Column(
                   children: [
                     GestureDetector(
@@ -190,8 +189,8 @@ class _UserSosAlertState extends State<UserSosAlert> {
                           ],
                         ),
                         child: SizedBox(
-                          width: 69,
-                          height: 70,
+                          width: 74,
+                          height: 75,
                           child: Card(
                             elevation: 0.0,
                             color: Color(0xFFE10000),
@@ -207,16 +206,15 @@ class _UserSosAlertState extends State<UserSosAlert> {
                       ),
                     ),
                     SizedBox(
-                      height: 7,
+                      height: 8,
                     ),
                     Text("Medical Help",
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 13,
+                            fontSize: 15,
                             fontWeight: FontWeight.w800))
                   ],
                 ),
-                SizedBox(width: 10),
                 Column(
                   children: [
                     GestureDetector(
@@ -234,8 +232,8 @@ class _UserSosAlertState extends State<UserSosAlert> {
                           ],
                         ),
                         child: SizedBox(
-                          width: 69,
-                          height: 70,
+                          width: 74,
+                          height: 75,
                           child: Card(
                             elevation: 0.0,
                             color: Color(0xFFE10000),
@@ -251,16 +249,15 @@ class _UserSosAlertState extends State<UserSosAlert> {
                       ),
                     ),
                     SizedBox(
-                      height: 7,
+                      height: 8,
                     ),
                     Text("Stuck in Lift",
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 13,
+                            fontSize: 15,
                             fontWeight: FontWeight.w800))
                   ],
                 ),
-                SizedBox(width: 10),
                 Column(
                   children: [
                     GestureDetector(
@@ -278,8 +275,8 @@ class _UserSosAlertState extends State<UserSosAlert> {
                           ],
                         ),
                         child: SizedBox(
-                          width: 69,
-                          height: 70,
+                          width: 74,
+                          height: 75,
                           child: Card(
                             elevation: 0.0,
                             color: Color(0xFFE10000),
@@ -295,12 +292,12 @@ class _UserSosAlertState extends State<UserSosAlert> {
                       ),
                     ),
                     SizedBox(
-                      height: 7,
+                      height: 8,
                     ),
                     Text("Theft",
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 13,
+                            fontSize: 15,
                             fontWeight: FontWeight.w800))
                   ],
                 ),
@@ -318,7 +315,7 @@ class _UserSosAlertState extends State<UserSosAlert> {
             ),
             SizedBox(height: 15),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Column(
                   children: [
@@ -507,8 +504,8 @@ class _UserSosAlertState extends State<UserSosAlert> {
                           ],
                         ),
                         child: SizedBox(
-                          width: 69,
-                          height: 70,
+                          width: 74,
+                          height: 75,
                           child: Card(
                             elevation: 0.0,
                             color: Colors.white,
@@ -529,11 +526,11 @@ class _UserSosAlertState extends State<UserSosAlert> {
                     Text("Pet Gone",
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 13,
+                            fontSize: 15,
                             fontWeight: FontWeight.w800))
                   ],
                 ),
-                SizedBox(width: 50),
+                // SizedBox(width: 50),
                 Column(
                   children: [
                     GestureDetector(
@@ -555,8 +552,8 @@ class _UserSosAlertState extends State<UserSosAlert> {
                           ],
                         ),
                         child: SizedBox(
-                          width: 69,
-                          height: 70,
+                          width: 74,
+                          height: 75,
                           child: Card(
                             elevation: 0.0,
                             color: Colors.white,
@@ -572,16 +569,16 @@ class _UserSosAlertState extends State<UserSosAlert> {
                       ),
                     ),
                     SizedBox(
-                      height: 7,
+                      height: 8,
                     ),
                     Text("Water Leak",
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 13,
+                            fontSize: 15,
                             fontWeight: FontWeight.w800))
                   ],
                 ),
-                SizedBox(width: 50),
+                //    SizedBox(width: 50),
                 Column(
                   children: [
                     GestureDetector(
@@ -603,8 +600,8 @@ class _UserSosAlertState extends State<UserSosAlert> {
                           ],
                         ),
                         child: SizedBox(
-                          width: 69,
-                          height: 70,
+                          width: 74,
+                          height: 75,
                           child: Card(
                             elevation: 0.0,
                             color: Colors.white,
@@ -620,20 +617,23 @@ class _UserSosAlertState extends State<UserSosAlert> {
                       ),
                     ),
                     SizedBox(
-                      height: 7,
+                      height: 8,
                     ),
                     Text("Fighting",
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 13,
+                            fontSize: 15,
                             fontWeight: FontWeight.w800))
                   ],
                 ),
               ],
             ),
             Container(
-                margin:
-                    EdgeInsets.only(top: 20, left: 20, right: 20, bottom: 40),
+                margin: EdgeInsets.only(
+                    top: 30,
+                    left: MediaQuery.of(context).size.width / 10,
+                    right: MediaQuery.of(context).size.width / 10,
+                    bottom: 40),
                 padding: const EdgeInsets.only(left: 10, right: 10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
@@ -666,7 +666,7 @@ class _UserSosAlertState extends State<UserSosAlert> {
                       padding: const EdgeInsets.only(
                           left: 5.0, right: 5, bottom: 10),
                       child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Text("Associate : " + "+91 " + "1234567890",
                                 style: TextStyle(
@@ -696,7 +696,7 @@ class _UserSosAlertState extends State<UserSosAlert> {
                       padding: const EdgeInsets.only(
                           left: 5.0, right: 5, bottom: 10),
                       child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Text("Associate : " + "+91 " + "1234567890",
                                 style: TextStyle(
@@ -726,7 +726,7 @@ class _UserSosAlertState extends State<UserSosAlert> {
                       padding: const EdgeInsets.only(
                           left: 5.0, right: 5, bottom: 10),
                       child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Text("Associate : " + "+91 " + "1234567890",
                                 style: TextStyle(
@@ -756,7 +756,7 @@ class _UserSosAlertState extends State<UserSosAlert> {
                       padding: const EdgeInsets.only(
                           left: 5.0, right: 5, bottom: 10),
                       child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Text("Associate : " + "+91 " + "1234567890",
                                 style: TextStyle(
@@ -786,7 +786,7 @@ class _UserSosAlertState extends State<UserSosAlert> {
                       padding: const EdgeInsets.only(
                           left: 5.0, right: 5, bottom: 10),
                       child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Text("Associate : " + "+91 " + "1234567890",
                                 style: TextStyle(
@@ -816,7 +816,7 @@ class _UserSosAlertState extends State<UserSosAlert> {
                       padding: const EdgeInsets.only(
                           left: 5.0, right: 5, bottom: 10),
                       child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Text("Associate : " + "+91 " + "1234567890",
                                 style: TextStyle(
@@ -858,7 +858,7 @@ class _UserSosAlertState extends State<UserSosAlert> {
                       padding: const EdgeInsets.only(
                           left: 5.0, right: 5, bottom: 10),
                       child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Text("Associate : " + "+91 " + "1234567890",
                                 style: TextStyle(
@@ -888,7 +888,7 @@ class _UserSosAlertState extends State<UserSosAlert> {
                       padding: const EdgeInsets.only(
                           left: 5.0, right: 5, bottom: 10),
                       child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Text("Associate : " + "+91 " + "1234567890",
                                 style: TextStyle(

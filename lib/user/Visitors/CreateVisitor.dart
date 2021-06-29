@@ -197,109 +197,200 @@ class _CreateVisitorState extends State<CreateVisitor> {
                 },
               )),
           SizedBox(height: 30),
-          // ElevatedButton(
-          //   style: ButtonStyle(
-          //       backgroundColor: MaterialStateProperty.all(Color(0xFF7Fb539)),
-          //       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-          //           RoundedRectangleBorder(
-          //               borderRadius: BorderRadius.circular(16.0),
-          //               side:
-          //                   BorderSide(color: Color(0xFF7Fb539), width: 2.0)))),
-          //   child: Text('Create', style: TextStyle(fontSize: 16.0)),
-          //   onPressed: () {
-          AnimatedButton(
-              text: 'Create',
-              color: Color((0xFF7Fb539)),
-              pressEvent: () {
-                AwesomeDialog(
-                  context: context,
-                  animType: AnimType.SCALE,
-                  dialogType: DialogType.SUCCES,
-                  body: Container(
-                      height: 500,
-                      child: Column(
-                        children: <Widget>[
-                          SizedBox(height: 10),
-                          Text("Visitor Entry Created",
-                              style: TextStyle(
-                                  color: Color(0xFF7Fb539),
-                                  fontSize: 23,
-                                  fontWeight: FontWeight.w500)),
-                          Container(
-                            margin: const EdgeInsets.all(15.0),
-                            padding: const EdgeInsets.all(8.0),
-                            height: 130,
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                color: Color(0xFF7Fb539),
-                                width: 1.0,
-                              ),
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: Center(
-                              child: Column(children: [
-                                SizedBox(height: 10),
-                                Text(
-                                  "Savannah Nguyen",
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                SizedBox(height: 20),
-                                Text("Relative",
+          RaisedButton(
+              padding:
+                  EdgeInsets.only(top: 15, left: 60, right: 60, bottom: 15),
+              color: Color(0xFF7Fb539),
+              onPressed: () {
+                showDialog(
+                    context: context,
+                    builder: (context) {
+                      return Dialog(
+                        shape: RoundedRectangleBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20.0))),
+                        child: Container(
+                            height: 550,
+                            width: MediaQuery.of(context).size.width / 15,
+                            child: Column(
+                              children: <Widget>[
+                                SizedBox(height: 30),
+                                Text("Visitor Entry Created",
                                     style: TextStyle(
                                         color: Color(0xFF7Fb539),
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 18)),
+                                        fontSize: 23,
+                                        fontWeight: FontWeight.w500)),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Stack(
+                                    alignment: Alignment.topCenter,
+                                    overflow: Overflow.visible,
+                                    children: <Widget>[
+                                      Container(
+                                        margin: const EdgeInsets.all(15.0),
+                                        padding: const EdgeInsets.all(8.0),
+                                        height: 110,
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                            color: Color(0xFF7Fb539),
+                                            width: 1.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Center(
+                                          child: Column(children: [
+                                            SizedBox(height: 20),
+                                            Text(
+                                              "Savannah Ngyuyen",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w400,
+                                              ),
+                                            ),
+                                            SizedBox(height: 10),
+                                            Text(
+                                              "Relative",
+                                              style: TextStyle(
+                                                color: Color(0xFF7Fb539),
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
+                                            SizedBox(height: 7),
+                                            RichText(
+                                                text: TextSpan(
+                                                    text: "Expected Date: ",
+                                                    style: TextStyle(
+                                                        fontSize: 15,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        color:
+                                                            Color(0xFF7Fb539)),
+                                                    children: <TextSpan>[
+                                                  TextSpan(
+                                                      text: "Fri, 26 Mar 2021",
+                                                      style: TextStyle(
+                                                          fontSize: 15,
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          color: Colors.black)),
+                                                ]))
+                                          ]),
+                                        ),
+                                      ),
+                                      Positioned(
+                                          top: -5,
+                                          child: CircleAvatar(
+                                              radius: 20,
+                                              child: ClipRRect(
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(20)),
+                                                child: Image.asset(
+                                                    "images/tick_i.png"),
+                                              )))
+                                    ]),
+                                Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Container(
+                                        margin: const EdgeInsets.only(
+                                            left: 40.0, top: 20),
+                                        child: Text(
+                                          "ABCD1234",
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 28,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                        ),
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
+                                        children: [
+                                          Container(
+                                            margin: const EdgeInsets.only(
+                                                left: 10.0, top: 20),
+                                            child: IconButton(
+                                              icon: Icon(
+                                                  Icons.content_copy_outlined,
+                                                  color: Color(0xFF7Fb539)),
+                                              onPressed: () {},
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ]),
+                                Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Container(
+                                          margin: const EdgeInsets.only(
+                                              left: 10.0, top: 10),
+                                          child: Image.asset(
+                                              "images/qrCode.png",
+                                              width: 150,
+                                              height: 150)),
+                                      Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
+                                        children: [
+                                          Container(
+                                            margin: const EdgeInsets.only(
+                                                left: 10.0, top: 20),
+                                            child: IconButton(
+                                              icon: Icon(Icons.share,
+                                                  color: Colors.black),
+                                              onPressed: () {},
+                                            ),
+                                          ),
+                                          Container(
+                                            margin: const EdgeInsets.only(
+                                                left: 10.0, top: 10),
+                                            child: IconButton(
+                                              icon: Icon(Icons.download_sharp,
+                                                  color: Colors.black),
+                                              onPressed: () {},
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ]),
                                 SizedBox(height: 20),
-                                Row(children: [
-                                  Text(
-                                    "Expected Date : ",
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                  Text("Fri,26 Mar 2021",
-                                      style: TextStyle(
-                                          color: Color(0xFF7Fb539),
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 15)),
-                                ])
-                              ]),
-                            ),
-                          )
-                        ],
-                      )),
-                )..show();
-              }),
-
-          // showDialog(
-          //     context: context,
-          //     builder: (context) {
-          //       return Dialog(
-          //         shape: RoundedRectangleBorder(
-          //             borderRadius:
-          //                 BorderRadius.all(Radius.circular(20.0))),
-          //         child: Container(
-          //             height: 500,
-          //             child: Column(
-          //               children: <Widget>[
-          //                 SizedBox(height: 40),
-          //                 Text("Visitor Entry Created",
-          //                     style: TextStyle(
-          //                         color: Color(0xFF7Fb539),
-          //                         fontSize: 23,
-          //                         fontWeight: FontWeight.w500))
-          //               ],
-          //             )),
-          //       );
-          //     });
-          //   },
-          // ),
+                                RaisedButton(
+                                    padding: EdgeInsets.only(
+                                        top: 10,
+                                        left: 25,
+                                        right: 25,
+                                        bottom: 10),
+                                    color: Colors.white,
+                                    onPressed: () {},
+                                    child: Text('Done',
+                                        style: TextStyle(
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.w500,
+                                            color: Color(0xFF7Fb539))),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(25.0),
+                                        side: BorderSide(
+                                            color: Color(0xFF7Fb539),
+                                            width: 1.5))),
+                              ],
+                            )),
+                      );
+                    });
+              },
+              child: Text('Create',
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white)),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25.0))),
         ])));
   }
 }
